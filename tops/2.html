@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        #tab1
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            font-size: xx-large;
+            color:red;
+            text-shadow: 2px 2px 4px rgb(236, 197, 119);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <table id="tab1" align="center">
+        <tr>
+        
+            <td><img src="logo-removebg-preview.png" alt="" width="100px"></td>
+            <td >Employee Registration Form</td>
+        
+        </tr>
+    </table>
+    <form>
+        <table align="center">
+            <tr>
+                <td colspan="2" style="padding-left:150px;">
+                    <input type="radio" name="gender" checked>Mr.
+                    <input type="radio" name="gender">Mrs.
+                    <input type="radio" name="gender">Ms.
+                </td>
+            </tr>
+
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" placeholder="First Name"></td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" placeholder="Last Name"></td>
+            </tr>
+
+            <tr>
+                <td>Mail Address1</td>
+                <td><input type="email"></td>
+            </tr>
+
+            <tr>
+                <td>Mail Address2</td>
+                <td><input type="email"></td>
+            </tr>
+
+            <tr>
+                <td>City</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>State</td>
+                <td><select>
+                    <option hidden>Select</option>
+                    <option>Gujrat</option>
+                    <option>Rajsthan</option>
+                    <option>Andhra Pradesh</option>
+                    <option>
+                        Arunachal Pradesh</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td>Zip</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Upload Photo</td>
+                <td><input type="file" multiple></td>
+            </tr>
+
+            <tr>
+                <td>E-Mail</td>
+                <td><input type="email"></td>
+            </tr>
+
+            <tr>
+                <td>Mobile</td>
+                <td><input type="text" placeholder="+91"></td>
+            </tr>
+
+            <tr>
+                <td>language Know</td>
+                <td><input type="checkbox">Gujarati<br>
+                    <input type="checkbox">Hindi<br>
+                    <input type="checkbox">English<br>
+                    <input type="checkbox">Marathi
+                </td>
+            </tr>
+
+            <tr>
+                <td>Additional Information</td>
+                <td><textarea placeholder="Optional"></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center"><input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
