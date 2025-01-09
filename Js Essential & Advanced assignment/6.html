@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>QUESTION:</h2><i> Use comparison operators to check if two numbers are equal and if
+        onenumber is greater than the other.</i><br><br>
+    <label>Enter &nbsp;First &nbsp;&nbsp; Number</label> <input class="inp1" type="text" /><br><br>
+    <label>Enter Second Number</label> <input class="inp2" type="text" /><br>
+    <button type="button" class="btn">Check</button>
+    <h1></h1>
+    <script>
+      let f1=()=>{
+        let a=inp1.value
+        let b=inp2.value
+       if(a>b)
+       {
+        h1.innerHTML=a+" is grater than"+b
+       }
+       else if(a<b)
+       {
+        h1.innerHTML=b+" is grater than"+a
+       }
+       else{
+        h1.innerHTML=a+" and"+b+" are equal"
+       }
+      }
+      let x=10
+        let inp1 = document.querySelector(".inp1")
+        let inp2 = document.querySelector(".inp2")
+        let btn = document.querySelector(".btn")
+        let h1 = document.querySelector('h1')
+        btn.addEventListener("click",f1)
+
+    </script>
+</body>
+
+</html>

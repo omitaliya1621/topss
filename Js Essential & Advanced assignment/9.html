@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h5>Create a JavaScript program using a switchstatement to display the day of the
+        week based on the user input (e.g., 1 for Monday, 2 for Tuesday, etc.)</h5>
+    <label>Enter the number</label>
+    <input type="text" class="inp"/><br>
+    <button onclick="f1()">Check</button>
+    <h3></h3>
+    <script>
+        let inp = document.querySelector('.inp');
+        let h3 = document.querySelector('h3');
+      let f1=()=>{
+        
+        let v=inp.value
+        inp.value =""
+        switch (v) {
+            case '1':
+                h3.innerHTML='Monday';
+                break;
+            case '2':
+                h3.innerHTML='Tuesday';
+                break;
+            case '3':
+                h3.innerHTML='Wednesday';
+                break;
+            case '4':
+                h3.innerHTML='Thursday';
+                break;
+            case '5':
+                h3.innerHTML='Friday';
+                break;
+            case '6':
+                h3.innerHTML='Saturday';
+                break;
+            case '7':
+                h3.innerHTML='Sunday';
+                break;
+            default:
+                h3.innerHTML='Invalid input';
+                break;
+
+        }
+      }
+    </script>
+</body>
+
+</html>

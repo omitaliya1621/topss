@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Enter the Number:</label><input class="inp1" type="text" /><br>
+
+    <button onclick="check()">Check</button>
+    <h1></h1>
+    <script>
+        let inp1 = document.querySelector('.inp1')
+        let h1 = document.querySelector('h1')
+        let check = () => {
+            if (inp1.value == 0) {
+                h1.innerHTML = inp1.value + " Number is zero"
+            }
+            else if (inp1.value > 0) {
+                h1.innerHTML = inp1.value + " Number is positive"
+            }
+            else {
+                h1.innerHTML = inp1.value + " Number is negative"
+            }
+        }
+    </script>
+</body>
+
+</html>
