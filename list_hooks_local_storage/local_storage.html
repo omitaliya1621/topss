@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local_storage</title>
+</head>
+
+<body>
+    <h3>Local_storage</h3>
+    <div>
+        <input type="text" id="id" hidden>
+        <input type="text" id="nm">
+        <input type="text" id="age">
+        <input type="text" id="gender">
+        <button onclick="Add()">Add</button>
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    
+    
+    users = JSON.parse(localStorage.getItem('users')) || [];
+    function Add() {
+    id = document.getElementById('id').value;
+    name = document.getElementById('nm').value;
+    age = document.getElementById('age').value;
+    gender = document.getElementById('gender').value;
+
+    if (id)
+    {
+        
+         users = users.map((v) => v.id == id ? {id:id, name: name, age: age, gender: gender}:v)
+    }
+    else{
+        user = { id: users.length + 1, name: name, age: age, gender: gender };
+        users.push(user);
+    }
+    localStorage.setItem('users', JSON.stringify(users));
+    show()
+    }
+    function show() {
+        let table = document.getElementById('table');
+        table.innerHTML = '';
+        let data = JSON.parse(localStorage.getItem('users')) || [];
+        data.map((v) => {
+            table.innerHTML += `
+            <tr>
+        <td>${v.id}</td>
+        <td>${v.name}</td>
+        <td>${v.age}</td>
+        <td>${v.gender}</td>
+        <td>
+            <button onclick="edit(${v.id})">Edit</button>
+            <button onclick="delet(${v.id})">Delete</button>
+            </td>
+            </tr>
+            
+            `
+            
+        })
+        
+    }
+    function edit(id) {
+        let dd = users.find((v) => v.id == id)
+        id = document.getElementById('id').value = dd.id;
+        name = document.getElementById('nm').value = dd.name;
+        age = document.getElementById('age').value = dd.age;
+        gender = document.getElementById('gender').value = dd.gender;
+       
+
+    }
+   function delet(id) {
+     users = users.filter((v) => v.id!= id)
+     localStorage.setItem('users', JSON.stringify(users));
+     show();
+   }
+    show();
+</script>
